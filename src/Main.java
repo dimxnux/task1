@@ -1,12 +1,18 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
+
 
     public static void concatenateValues(Object[] values) {
         StringBuilder concatenatedStrings = new StringBuilder();
         long sum = 0;
         List<Person> persons = new ArrayList<>();
+
+        Object o1 = values[0];
+        o1.getValue();
 
         for (Object o : values) {
             if (o instanceof Character || o instanceof String) {
@@ -26,12 +32,39 @@ public class Main {
         System.out.println(persons);
     }
 
+    public static void classesTest(Object[] values) {
+//        Set<Class<?>> sumClasses = new HashSet<>(List.of(Long.class, Integer.class));
+        Class<?>[] sumClasses1 = {Long.class, Integer.class};
+        Set<Class<?>> sumClasses = new HashSet<>(List.of(sumClasses1));
+
+
+        Class<?>[] concatenateClasses = {Character.class, String.class};
+        Class<?>[] addToListClasses = {Person.class};
+
+        for (Object o : values) {
+            if (/*o in sumClasses*/true) {
+
+            } else if (/*o in concatClasses*/true) {
+
+            } else if (/*o in addToLClasses*/true) {
+
+            }
+        }
+
+    }
+
+//    public static void main(String[] args) {
+//        Object[] values = {"Today", new Person("alex", "brown", 21, PersonGender.MALE),
+//                32344234234L, "is", 23, 652, 'a',
+//                new Person("emma", "adams", 40, PersonGender.FEMALE),
+//                "big", "day"};
+//        concatenateValues(values);
+//    }
+
     public static void main(String[] args) {
-        Object[] values = {"Today", new Person("alex", "brown", 21, PersonGender.MALE),
-                32344234234L, "is", 23, 652, 'a',
-                new Person("emma", "adams", 40, PersonGender.FEMALE),
-                "big", "day"};
-        concatenateValues(values);
+        // abstractization
+
+        List<Operations>
     }
 
 }
