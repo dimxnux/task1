@@ -41,6 +41,11 @@ public enum ConcatenateOperations {
 
     public abstract void consume(Object value);
 
+    public static ConcatenateOperations valueOf(Object o) {
+        String className = o.getClass().getSimpleName().toUpperCase();
+        return valueOf(className);
+    }
+
     public static long getSum() {
         return sum;
     }

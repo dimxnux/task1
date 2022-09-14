@@ -2,8 +2,7 @@ public class Main {
 
     public static void concatenateValues(Object[] values) {
         for (Object o : values) {
-            String enumMapping = o.getClass().getSimpleName().toUpperCase();
-            ConcatenateOperations operation = ConcatenateOperations.valueOf(enumMapping);
+            ConcatenateOperations operation = ConcatenateOperations.valueOf(o);
             operation.consume(o);
         }
 
