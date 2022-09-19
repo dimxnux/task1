@@ -36,8 +36,8 @@ public enum ConcatenateOperations {
     };
 
     private static long sum = 0;
-    private static StringBuilder concatenatedStrings = new StringBuilder();
-    private static List<Person> persons = new ArrayList<>();
+    private static final StringBuilder concatenatedStrings = new StringBuilder();
+    private static final List<Person> persons = new ArrayList<>();
 
     public abstract void consume(Object value);
 
