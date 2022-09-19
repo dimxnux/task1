@@ -2,7 +2,7 @@ public class Main {
 
     public static void concatenateValues(Object[] values) {
         for (Object o : values) {
-            ConcatenateOperations operation = ConcatenateOperations.valueOf(o);
+            ConcatenateOperations operation = ConcatenateOperations.valueOf(o.getClass());
             operation.consume(o);
         }
 
